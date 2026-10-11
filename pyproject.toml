@@ -1,0 +1,31 @@
+[project]
+name = "CVpython"
+version = "0.1.0"
+description = "Educational Project on Computer Vision in Python"
+readme = "README.md"
+authors = [
+    { name = "Pablo", email = "pabloflc137@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "opencv-python>=5.0.0.93",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.2",
+    "ruff>=0.17.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP"]
+
+
+
+
