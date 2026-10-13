@@ -16,3 +16,5 @@ repos:
       - id: ruff-check
         args: ["--fix"]
       - id: ruff-format
+      - id: ruff-import-sort
+        args: ["--profile=black"]
