@@ -32,7 +32,6 @@ uv run CVPython
 
 #### Notes
 - Correct [commit messages](#commits) and [branch names](#branch-model)
-- What is allowed to commit: [What not to commit](#what-not-to-commit)
 
 **1. Create a new branch based on `dev`**
 
@@ -111,7 +110,7 @@ All code must follow Python's [PEP 8](https://peps.python.org/pep-0008/) style g
 You can check and format your coude manually:
 
 ```bash
-uv run ruff format .        # format the code
+uv run ruff format .        # format the codeNotebooks keep their outputs, so you can read them directly on GitHub without
 uv run ruff check . --fix   # lint and fix what can be fixed automatically
 ```
 However, there are pre-commit hooks configured that run these checks automatically.

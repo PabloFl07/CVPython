@@ -99,12 +99,31 @@ python concepts/01_<subdomain>/<concept>.py
 
 ### 2. Open the notebooks
 
-Notebooks keep their outputs, so you can read them directly on GitHub without
-running anything. To run and edit them locally:
+I will be using 2 types of notebooks:
+
+- **Marimo Notebooks**: they are generated from a Python file and arranged into a Notebook in a local server.
+They are aeasier to versionate and use outside of a notebook interpreter.
+
+```bash
+marimo edit file.py   # The notebook will behave like a Jupyter Notebook
+
+marimo run file.py    # It just runs the cells and shows the output
+```
+Tutorial on Marimo's main features coming soon.
+
+- **Jupyter Notebooks**: they keep their outputs, so you can read them directly on GitHub without
+running anything. However, they may be heavier and need the Jupyter Server.
 
 ```bash
 uv run --with jupyter jupyter lab
 ```
+This will start a Jupyter Notebooks session on your **browser**
+
+> [!NOTE]
+> `uv run --with jupyter` downloads Jupyter and its dependencies the first time you run it.
+> They are **not** added to the project: `pyproject.toml`, `uv.lock` and `.venv` stay untouched.
+> uv installs them into a temporary environment and keeps them in its global cache,
+> so later runs start almost instantly. To free that space, run `uv cache clean`.
 
 
 ### 3. Try the tools
